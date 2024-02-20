@@ -6,7 +6,7 @@
 
 	.cards {
 		&__box {
-            font-size: 1.2em;
+			font-size: 1.2em;
 			padding: 10em 2em;
 		}
 		&__card {
@@ -25,18 +25,18 @@
 		}
 	}
 
-.info {
-    .info__boxes {
-        .info__box {
-            &-title {
-                font-size: 4rem;
-            }
-            &-text {
-                font-size: 2rem;
-            }
-        }
-    }
-}
+	.info {
+		.info__boxes {
+			.info__box {
+				&-title {
+					font-size: 4rem;
+				}
+				&-text {
+					font-size: 2rem;
+				}
+			}
+		}
+	}
 
 	.plans {
 		padding: 10em 2em;
@@ -46,7 +46,7 @@
 			align-items: center;
 		}
 		&__item {
-        font-size: 1.5em;
+			font-size: 1.5em;
 			margin: 1em;
 		}
 		&__item-name {
@@ -54,28 +54,58 @@
 			margin-bottom: 0;
 		}
 		&__item-icon {
-		margin-left: 2em;
+			margin-left: 2em;
 		}
 	}
 
-.newsletter {
-    &__wrapper {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        align-items: center;
-    }
-    &__text {
-        margin-bottom: 0;
-    }
-    &__form {
-        display: grid;
-        grid-template-columns: 3fr 1fr;
-        gap: 2em;
-        &--input {
-            margin-bottom: 0;
-        }
-    }
-   
+	.newsletter {
+		&__wrapper {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			align-items: center;
+		}
+		&__text {
+			margin-bottom: 0;
+		}
+		&__form {
+			display: grid;
+			grid-template-columns: 3fr 1fr;
+			gap: 2em;
+			&--input {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	.gallery {
+		grid-template-columns: repeat(4, 1fr);
+		&__image {
+			&:nth-child(odd) {
+				display: block;
+			}
+		}
+	}
 }
 
+.contact {
+	&__form {
+		gap: 30px;
+		&-box {
+			&:nth-child(1) {
+				grid-column: 1/4;
+				grid-row: 1/2;
+			}
+			&:nth-child(2) {
+				grid-column: 4/7;
+				grid-row: 1/2;
+			}
+			&:nth-child(3) {
+				grid-column: 1/-1;
+				grid-row: 2/3;
+			}
+		}
+		&-btn {
+			grid-row: 3/4;
+		}
+	}
 }
